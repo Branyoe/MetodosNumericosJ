@@ -1,0 +1,12 @@
+.card {
+  width: 70%;
+}
+
+.col-12 {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
