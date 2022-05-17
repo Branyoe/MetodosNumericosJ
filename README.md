@@ -1,4 +1,4 @@
-# ¡Bienvenido a Metodos Numericos Miguel!
+# ¡Bienvenido a Metodos Numericos Yisus!
 
 ## Modo de uso
 
