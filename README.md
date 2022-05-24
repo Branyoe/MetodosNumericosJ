@@ -1,4 +1,4 @@
-# ¡Bienvenido a Metodos Numericos Yisus!
+# ¡Bienvenido a Metodos Numericos Integrales!
 
 ## Modo de uso
 
