@@ -1,9 +1,16 @@
-function calcular(xL, xU, Ea) {
-  let iteraciones = bucle(xL, xU, Ea);
-  return iteraciones;
+function calcular({ x0, x1, fx }) {
+  let integral = getFormattedFx(fx);
+  return integral 
 }
 
-
+function getFormattedFx(fx = ""){
+  let integral = fx.trim();
+  integral = integral.split(" ")
+  integral = integral.map(v => {
+    return v.replace("^", "**");
+  });
+  return integral;
+}
 
 function bucle(xL, xU, Ea) {
   let iteraciones = [];

@@ -6,8 +6,8 @@ const bodyParser = require('body-parser');
 const FormData = require('./models/FormData');
 const { calcular } = require('./controllers/script');
 
-let iteraciones;
-app.locals.iteraciones = iteraciones;
+let data;
+app.locals.iteraciones = data;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        iteraciones: iteraciones
+        data: data
     });
 });
 
@@ -26,14 +26,9 @@ app.post('/', (req, res) => {
     const formData = new FormData(
         req.body.x0,
         req.body.x1,
-        req.body.Ea
+        req.body.fx
     );
-    let solution = calcular(formData.x0, formData.x1, formData.Ea);
-    if(Array.isArray(solution)){
-        iteraciones = solution
-    }else{
-        iteraciones = solution.error
-    }
+    data = calcular(formData)
     res.redirect('/');
 });
 
