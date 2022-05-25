@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const FormData = require('./models/FormData');
 const { calcular } = require('./controllers/script');
 
-let data;
+let data = {};
 app.locals.iteraciones = data;
 
 app.set('view engine', 'ejs');
@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
+    data = {};
     const formData = new FormData(
         req.body.x0,
         req.body.x1,
